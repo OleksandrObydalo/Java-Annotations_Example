@@ -1,6 +1,13 @@
 package parametrized_annotation;
 
-@ClassPreamble (
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+
+
+@ClassPreamble(
         author = "John Doe",
         date = "3/17/2022",
         currentRevision = 6,
@@ -8,11 +15,12 @@ package parametrized_annotation;
         lastModifiedBy = "Jane Doe",
         reviewers = {"Alice", "Bob", "Cindy"}
 )
-
 public class MyClass {
-    // class code goes here
+    // ваш код тут
 }
 
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.TYPE)
 @interface ClassPreamble {
     String author();
     String date();
