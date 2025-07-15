@@ -1,4 +1,4 @@
-package SpringBootAnnotation;
+package spring_boot_annotation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
